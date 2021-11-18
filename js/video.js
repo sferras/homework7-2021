@@ -10,18 +10,18 @@ document.querySelector("#play").addEventListener("click", function() {
 	document.querySelector("#volume").innerHTML = video.volume * 100 + "%"
 });
 
-document.querySelector("pause").addEventListener("click", function() {
+document.querySelector("#pause").addEventListener("click", function() {
 	console.log("Pause Video")
 	video.pause()
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
-	video.playbackRate = video.playbackRate * 0.95;
+	video.playbackRate = video.playbackRate - 5;
 	console.log("The new speed is = " + video.playbackRate)
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
-	video.playbackRate = video.playbackRate * 1.05;
+	video.playbackRate = video.playbackRate + 5;
 	console.log("The new speed is = " + video.playbackRate)
 });
 
